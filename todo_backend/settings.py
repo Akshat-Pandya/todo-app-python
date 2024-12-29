@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zrhwe$&ieur$^_er2u915@=d&v$$-dtzj73l_rotihl9_j3@w#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,13 +80,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'todo_backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'todoapp_django_database',
+        'USER': 'todoapp_django_database_user',
+        'PASSWORD': '1dGyrwD4h2s1VaQSDxg1TmharKSSdTQi',
+        'HOST': 'dpg-ctoi2fbtq21c73ctqaag-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 

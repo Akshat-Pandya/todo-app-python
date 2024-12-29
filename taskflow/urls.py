@@ -1,6 +1,6 @@
 from django.urls import path
-from .appviews.auth_views import SignupView, UserDetailsView
-from .appviews.task_views import TodoCreateView, TodoListView, TodoUpdateView, TodoDeleteView
+from .app_views.auth_views import SignupView, UserDetailsView
+from .app_views.task_views import TodoCreateView, TodoListView, TodoUpdateView, TodoDeleteView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
