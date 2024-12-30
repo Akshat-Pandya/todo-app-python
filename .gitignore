@@ -1,27 +1,2 @@
-# Django specific
-*.pyc
-__pycache__/
-
-# Environment variables
 .env
 
-# Virtual environment
-venv/
-env/
-
-# Database
-*.sqlite3
-
-# IDE files
-.idea/
-.vscode/
-
-# Logs
-*.log
-
-# Static and media files
-/staticfiles/
-/media/
-
-
-.env
